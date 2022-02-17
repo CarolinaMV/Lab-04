@@ -1,7 +1,7 @@
 package hangman.model;
 
 public class PowerScore implements GameScore{
-
+    private final score = 100;
     public int calculateScore(int correctCount, int incorrectCount){
         /**
          * @pre el juego inicia con 100 puntos
@@ -25,6 +25,6 @@ public class PowerScore implements GameScore{
     }
 
     public int getInitialScore() {
-        return 0;
+        return score;
     }
 }
