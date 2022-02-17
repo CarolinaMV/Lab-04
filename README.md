@@ -1,129 +1,49 @@
-### Escuela Colombiana de Ingeniería
+# Lab-04
 
-### Procesos de Desarrollo de Software
+## Desarrollo Dirigido por Pruebas + DIP + DI + Contenedores Livianos
 
-### Desarrollo Dirigido por Pruebas + DIP + DI + Contenedores Livianos
+### Parte 1
 
+**1.** Clonar el proyecto
 
-Para este taller se va a trabajar sobre el juego del ahorcado.
+   ![image](https://user-images.githubusercontent.com/98135902/154345977-f0f5f37c-7853-4551-a26c-eb6e6d4b7194.png)
+ 
+**2.** Implementar cascarones
 
-El sistema actual de puntuación del juego comienza en 100 puntos y va
-descontando 10 puntos cada vez que se propone una letra incorrecta.
+   ![image](https://user-images.githubusercontent.com/98135902/154352260-4e5220f3-2666-47aa-9913-10221751ecba.png)
+   
+**3.** Haga la especificación de los métodos calculateScore (de las tres variantes de GameScore), a partir de las especificaciones generales dadas anteriormente. Recuerde tener        en cuenta: @pre, @pos, @param, @throws.
 
-Algunos usuarios han propuesto diferentes esquemas para realizar la
-puntuación, los cuales se describen a continuación:
-
-* OriginalScore: 
-    * Es el esquema actual, se inicia con 100 puntos.
-    * No se bonifican las letras correctas.
-    * Se penaliza con 10 puntos con cada letra incorrecta.
-    * El puntaje minimo es 0.
-
-* BonusScore: 
-    * El juego inicia en 0 puntos.
-    * Se bonifica con 10 puntos cada letra correcta.
-    * Se penaliza con 5 puntos cada letra incorrecta.
-    * El puntaje mínimo es 0
+   **OriginalScore**
+   
+   ![image](https://user-images.githubusercontent.com/98135902/154354293-618d25fe-0ee1-4d8a-bf04-2b8244d49141.png)
+   
+   **BonusScore**
+   
+   ![image](https://user-images.githubusercontent.com/98135902/154355172-bb68deb3-33de-4ea7-907c-d2eddc3677b9.png)
+   
+   **PowerScore**
+   
+   ![image](https://user-images.githubusercontent.com/98135902/154355499-4dd4205e-754b-46e2-8a06-7fc068a179b2.png)
+   
+ **4.** Haga commit de lo realizado hasta ahora. Desde la terminal:
+ 
+   ![image](https://user-images.githubusercontent.com/98135902/154356490-31d9885b-b6c9-4f50-8c77-0f9a5ee1da38.png)
+   ![image](https://user-images.githubusercontent.com/98135902/154356523-59f50d38-2a34-4e07-b92c-1a653f9103ef.png)
+   
+ **5.** Actualice el archivo pom.xml e incluya las dependencias para la ultima versión de JUnit y la versión del compilador de Java a la versión 8
+ 
+   ![image](https://user-images.githubusercontent.com/98135902/154358285-db54e02e-e8e0-4645-b8bb-473f7dfc3f49.png)
     
-* PowerBonusScore:
-    * El juego inicia en 0 puntos.
-    * La $i-ésima$ letra correcta se bonifica con $5^i$.
-    * Se penaliza con 8 puntos cada letra incorrecta.
-    * El puntaje mínimo es 0
-    * Si con las reglas anteriores sobrepasa 500 puntos, el puntaje es
-      500.
-
-Lo anterior, se traduce en el siguiente modelo, donde se aplica el
-principio de inversión de dependencias:
-
-
-![](img/model.png)
-
-
-### Parte I
-
-1. Clone el proyecto (no lo descargue!).
+ **6.** Teniendo en cuenta dichas especificaciones, en la clase donde se implementarán las pruebas (GameScoreTest), en los comentarios iniciales, especifique las clases de               equivalencia para las tres variantes de GameScore, e identifique condiciones de frontera.
+ 
+   ![image](https://user-images.githubusercontent.com/98135902/154389773-90e8a6e2-d4e5-422c-9e36-a78bbaa23028.png)
+   ![image](https://user-images.githubusercontent.com/98135902/154389794-284d2b2f-5b39-414d-a349-adb09ad66a9d.png)
+   ![image](https://user-images.githubusercontent.com/98135902/154389813-5f3d3257-0205-4f95-9d92-025199fdbc23.png)
    
-2. A partir del código existente, implemente sólo los cascarones del
-   modelo antes indicado.
+**7.** Para cada clase de equivalencia y condición de frontera, implemente una prueba utilizando JUnit.
 
-3. Haga la especificación de los métodos calculateScore (de las tres
-   variantes de GameScore), a partir de las especificaciones
-   generales dadas anteriormente. Recuerde tener en cuenta: @pre,
-   @pos, @param, @throws.
+**8.** Haga commit de lo realizado hasta ahora. Desde la terminal:
 
-4. Haga commit de lo realizado hasta ahora. Desde la terminal:
-
-	```bash		
-	git add .			
-	git commit -m "especificación métodos"
-	```
-
-5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit y la versión del compilador de Java a la versión 8 .
+   ![image](https://user-images.githubusercontent.com/98135902/154390094-02a2acdc-3901-44bd-8a87-a6f339a75930.png)
    
-
-6. Teniendo en cuenta dichas especificaciones, en la clase donde se
-   implementarán las pruebas (GameScoreTest), en los
-   comentarios iniciales, especifique las clases de equivalencia para
-   las tres variantes de GameScore, e identifique
-   condiciones de frontera. 
-
-7. Para cada clase de equivalencia y condición de frontera, implemente
-   una prueba utilizando JUnit.
-
-8. Haga commit de lo realizado hasta ahora. Desde la terminal:
-
-	```bash		
-	git add .			
-	git commit -m "implementación pruebas"
-	```
-9. Realice la implementación de los 'cascarones' realizados anteriormente.
-   Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
-   se ejecutan satisfactoriamente.
-
-10. Al finalizar haga un nuevo commit:
-
-	```bash		
-	git add .			
-	git commit -m "implementación del modelo"
-	```
-
-11. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
-    el comando de GIT para enviar los cambios:
-
-```bash	
-	git push <URL Repositorio>	
-```
-
-
-### Parte II
-
-Actualmente se utiliza el patrón FactoryMethod
-que desacopla la creación de los objetos para diseñar un juego
-de ahorcado (revisar createGUIUsingFactoryMethod en SwingProject, el
-constructor de la clase GUI y HangmanFactoryMethod).
-
-En este taller se va a utilizar un contenedor liviano ([GoogleGuice](https://github.com/google/guice)) el cual soporta la inyección de las dependencias.
-
-1. Utilizando el HangmanFactoryMethod (MétodoFabrica) incluya el
-   OriginalScore a la configuración.
-
-Incorpore el Contenedor Liviano Guice dentro del proyecto:
-
-* Revise las dependencias necesarias en el pom.xml.
-* Modifique la inyección de dependencias utilizando guice en lugar del
-  método fábrica..
-* Configure la aplicación de manera que desde el programa SwingProject
-  NO SE CONSTRUYA el Score directamente, sino a través de Guice, asi
-  mismo como las otras dependencias que se están inyectando mediante
-  la fabrica.
-* Mediante la configuración de la Inyección de
-  Dependencias se pueda cambiar el comportamiento del mismo, por
-  ejemplo:
-	* Utilizar el esquema OriginalScore.
-	* Utilizar el esquema BonusScore.
-	* Utilizar el idioma francés.
-    * Utilizar el diccionario francés.
-	* etc...
-* Para lo anterior, [puede basarse en el ejemplo dado como
-  referencia](https://github.com/PDSW-ECI/LightweighContainers_DepenendecyInjectionIntro-WordProcessor).
