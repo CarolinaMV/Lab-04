@@ -22,4 +22,9 @@ public class HangmanDefaultFactoryMethod extends HangmanFactoryMethod {
     public HangmanPanel createHangmanPanel() {
         return new HangmanStickmanPanel();
     }
+
+    @Override
+    public GameScore createOriginalScore(){
+        return new OriginalScore();
+    }
 }
