@@ -5,6 +5,7 @@ public class OriginalScore implements GameScore{
     /*
     Es un tipo de puntaje que puede usar el juego
      */
+    private final score = 100;
 
     public int calculateScore(int correctCount, int incorrectCount) {
         /**
@@ -15,7 +16,7 @@ public class OriginalScore implements GameScore{
          * @return int, representa el marcador del partido
          * @throws ScoreException, si algun conteo es negativo
          */
-        int score = 100;
+        int score = getInitialScore();
         score = score - (incorrectCount * 10);
         if (score < 0){
             score = 0;
@@ -24,6 +25,6 @@ public class OriginalScore implements GameScore{
     }
 
     public int getInitialScore() {
-        return 0;
+        return score;
     }
 }
