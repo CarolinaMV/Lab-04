@@ -16,15 +16,15 @@
 
    **OriginalScore**
    
-   ![image](https://user-images.githubusercontent.com/98135902/154354293-618d25fe-0ee1-4d8a-bf04-2b8244d49141.png)
+   ![image](https://user-images.githubusercontent.com/98135902/154404486-fbd6ec00-6a11-4bc9-8670-1f19cb7cd246.png)
    
    **BonusScore**
    
-   ![image](https://user-images.githubusercontent.com/98135902/154355172-bb68deb3-33de-4ea7-907c-d2eddc3677b9.png)
+   ![image](https://user-images.githubusercontent.com/98135902/154404510-a1ed1d41-0f37-4aaf-b667-5856d637491c.png)
    
    **PowerScore**
    
-   ![image](https://user-images.githubusercontent.com/98135902/154355499-4dd4205e-754b-46e2-8a06-7fc068a179b2.png)
+   ![image](https://user-images.githubusercontent.com/98135902/154404530-189722aa-13e7-481d-9047-0ce0c9853416.png)
    
  **4.** Haga commit de lo realizado hasta ahora. Desde la terminal:
  
