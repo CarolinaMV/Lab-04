@@ -1,7 +1,7 @@
 package hangman.model;
 
 public class BonusScore implements GameScore{
-
+    private final score = 0;
     public int calculateScore(int correctCount, int incorrectCount) {
         /**
          * @pre el juego inicia con 0 puntos
@@ -20,6 +20,6 @@ public class BonusScore implements GameScore{
     }
 
     public int getInitialScore() {
-        return 0;
+        return score;
     }
 }
